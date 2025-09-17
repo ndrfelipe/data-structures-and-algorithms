@@ -64,30 +64,3 @@ int main(){
 
     return 0;
 }
-
-
-// ---------------
-
-void inOrder(Node* node){
-    if(node != nullptr){
-        inOrder(node->left);
-        std::cout<<node->value<<", ";
-        inOrder(node->right);
-    }
-}
-
-void preOrder(Node* node){
-    if(node != nullptr){
-        std::cout<<node->value<<", ";
-        preOrder(node->left);
-        preOrder(node->right);
-    }
-}
-
-void posOrder(Node* node){
-    if(node != nullptr){
-        posOrder(node->left);
-        posOrder(node->right);
-        std::cout<<node->value<<", ";
-    }
-}
