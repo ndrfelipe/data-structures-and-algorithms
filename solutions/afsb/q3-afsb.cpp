@@ -33,7 +33,7 @@ Node* insert(Node* node, int value){
 
 Node* search(Node* node, int value){
     if (node == nullptr){
-        std::cout<<"Node don't found. "<<"\n";
+        std::cout<<"Node don't found."<<"\n";
         return node;
     }
 
@@ -42,7 +42,7 @@ Node* search(Node* node, int value){
     }else if(value > node->value){
         node->right = search(node->right, value);
     }else{
-        std::cout<<"\nNode found: "<< node->value<<"\n";
+        std::cout<<"Node found: "<< node->value<<"\n";
     }
     return node;
 }
@@ -58,8 +58,9 @@ int main(){
     insert(node, 60);
     insert(node, 80);
 
+    search(node, 60);
+    search(node, 25);
     search(node, 40);
-    search(node, 1);
     delete(node);
 
     return 0;
