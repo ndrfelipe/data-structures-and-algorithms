@@ -20,7 +20,6 @@ void exibirProduto(Produto produto)
 
 }
 
-
 int main()
 {
     Produto produto;

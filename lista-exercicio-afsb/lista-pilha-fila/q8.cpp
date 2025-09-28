@@ -66,7 +66,5 @@ int main(){
     std::cout << "Original 2: " << exp2 << std::endl;
     std::cout << "Convertida:  " << to_binary(exp2) << "\n" << std::endl;
 
-
-
     return 0;
 }
