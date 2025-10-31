@@ -39,13 +39,11 @@ Node* insert_end(Node* head, int value){
 
 
 void print_list(Node* head){
-    Node* actually   = head;
-
     cout<<"Lista: ";
 
-    while (actually != nullptr){
-        cout<<actually->value<<" -> ";
-        actually = actually -> next;
+    while (head != nullptr){
+        cout<<head->value<<" -> ";
+        head = head -> next;
     }
 
     cout<<"NULL \n";
