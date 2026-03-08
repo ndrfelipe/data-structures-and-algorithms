@@ -72,7 +72,7 @@ def pesquisar(pessoa, faculdade):
                 return True
             
             else:
-                # 4. Se não, adicinando todos os vizinhos dessa pessoa ao final da fila
+                # 4. Se não, adicionando todos os vizinhos dessa pessoa ao final da fila.
                 fila += grafo[pessoa]
                 verificadas.append(pessoa)
                 print(f'Passando por {pessoa.nome}')
