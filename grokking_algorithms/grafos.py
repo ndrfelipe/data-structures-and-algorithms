@@ -55,22 +55,28 @@ def pesquisar(pessoa, faculdade):
     '''
         Recebe um grafo e encontra a pessoa mais próxima que estuda na faculdade enviada. 
     '''
+    # 1. Criando uma fila
     fila = deque()
     fila += grafo[pessoa]
-    verificadas = []
+    verificadas = [] # lista de pessoas verificadas, evitando loop infinito
 
-    while fila:
-        pessoa = fila.popleft()
+    while fila: # 5. repetindo o processo.
+        
+        pessoa = fila.popleft() # 2. Retirando a primeira pessoa da fila.
+
         if not pessoa in verificadas:
-            if verifica_faculdade(pessoa, faculdade):
+            
+            if verifica_faculdade(pessoa, faculdade): # 3. Verificando se estuda na faculdade desejada.
+                # 4. Se sim, busca concluida
                 print(pessoa.nome + " é a mais próxima que estuda na " + faculdade)
                 return True
             
             else:
+                # 4. Se não, adicinando todos os vizinhos dessa pessoa ao final da fila
                 fila += grafo[pessoa]
                 verificadas.append(pessoa)
                 print(f'Passando por {pessoa.nome}')
-
+        # Caso a fila fique vazia, não existem pessoas na sua rede que atendam àquele critério.
     return False
 
 
